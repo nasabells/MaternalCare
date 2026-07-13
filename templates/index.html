@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MaternalCare — Klasifikasi Risiko Kehamilan</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="/" class="logo">
+      <svg class="logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="16" cy="16" r="16" fill="#EAF3DE"/>
+        <path d="M16 22s-7-4.5-7-9a4 4 0 0 1 7-2.65A4 4 0 0 1 23 13c0 4.5-7 9-7 9z" fill="#7CAE7A"/>
+      </svg>
+      MaternalCare
+    </a>
+    <div class="nav-links">
+      <a href="/" class="active">Beranda</a>
+      <a href="/about">Tentang Kesehatan Maternal</a>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <span class="badge">Berbasis Machine Learning</span>
+    <h1>Selamat datang!</h1>
+    <p>Silahkan isi data kesehatan di bawah ini untuk mendapatkan hasil klasifikasi risiko kehamilan.</p>
+  </div>
+
+  <div class="page-content" style="padding-top: 0;">
+    <div class="card" style="max-width: 600px; margin: 0 auto;">
+      <form action="/predict" method="POST">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="age">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              Usia (tahun)
+            </label>
+            <input type="number" id="age" name="age" placeholder="cth: 28" min="10" max="70" required>
+          </div>
+          <div class="form-group">
+            <label for="body_temp">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>
+              Suhu Tubuh (°C)
+            </label>
+            <input type="number" id="body_temp" name="body_temp" placeholder="cth: 36.5" step="0.1" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="systolic">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              Sistolik (mmHg)
+            </label>
+            <input type="number" id="systolic" name="systolic" placeholder="cth: 120" required>
+          </div>
+          <div class="form-group">
+            <label for="bs">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6 2 2 8 2 12s4 10 10 10 10-4 10-10S18 2 12 2z"/><path d="M12 6v6l4 2"/></svg>
+              Gula Darah (mg/dL)
+            </label>
+            <input type="number" id="bs" name="bs" placeholder="cth: 100" step="0.1" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="diastolic">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              Diastolik (mmHg)
+            </label>
+            <input type="number" id="diastolic" name="diastolic" placeholder="cth: 80" required>
+          </div>
+          <div class="form-group">
+            <label for="heart_rate">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              Detak Jantung (bpm)
+            </label>
+            <input type="number" id="heart_rate" name="heart_rate" placeholder="cth: 76" required>
+          </div>
+        </div>
+
+        <p style="font-size: 13px; color: var(--text-muted); text-align: center; margin-bottom: 16px;">
+          Harap tekan tombol di bawah ini untuk mendapatkan klasifikasi dari data yang diberikan.
+        </p>
+
+        <button type="submit" class="btn btn-primary btn-full">Cek Hasil</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 MaternalCare · Sistem Klasifikasi Risiko Kesehatan Ibu Hamil</p>
+  </footer>
+
+</body>
+</html>

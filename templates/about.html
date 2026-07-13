@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tentang Kesehatan Maternal — MaternalCare</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="/" class="logo">
+      <svg class="logo-icon" viewBox="0 0 32 32" fill="none">
+        <circle cx="16" cy="16" r="16" fill="#EAF3DE"/>
+        <path d="M16 22s-7-4.5-7-9a4 4 0 0 1 7-2.65A4 4 0 0 1 23 13c0 4.5-7 9-7 9z" fill="#7CAE7A"/>
+      </svg>
+      MaternalCare
+    </a>
+    <div class="nav-links">
+      <a href="/">Beranda</a>
+      <a href="/about" class="active">Tentang Kesehatan Maternal</a>
+    </div>
+  </nav>
+
+  <div class="page-content">
+
+    <!-- Hero section -->
+    <div style="margin-bottom: 48px;">
+      <span class="badge">Informasi Kesehatan</span>
+      <h1 style="font-size: 30px; margin-bottom: 12px;">Tentang Kesehatan Maternal</h1>
+      <p style="color: var(--text-muted); max-width: 620px;">
+        Kesehatan maternal merujuk pada kesehatan perempuan selama masa kehamilan, persalinan, dan nifas.
+        Setiap tahap seharusnya menjadi pengalaman yang menyenangkan, memastikan perempuan dan bayi mereka mencapai potensi penuh untuk kesehatan dan kesejahteraan (WHO/Yoshi Shimizu).
+        Memahami tingkat risiko kehamilan sejak dini dapat membantu ibu dan tenaga medis mengambil langkah
+        yang tepat untuk menjaga keselamatan ibu dan janin.
+      </p>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Tingkat risiko -->
+    <div class="about-section">
+      <h2>Tingkat Risiko Kehamilan</h2>
+      <p>Sistem ini mengklasifikasikan risiko kehamilan ke dalam tiga kategori berdasarkan data kesehatan ibu:</p>
+
+      <div class="risk-cards">
+        <div class="risk-card" style="background: var(--green-light);">
+          <h3 style="color: var(--green-mid);">🟢 Risiko Rendah</h3>
+          <p style="color: var(--green-dark);">
+            Kondisi kehamilan dalam batas normal. Ibu disarankan tetap melakukan pemeriksaan rutin ke bidan
+            atau dokter kandungan sesuai jadwal yang ditentukan.
+          </p>
+        </div>
+        <div class="risk-card" style="background: var(--amber-light);">
+          <h3 style="color: var(--amber-dark);">🟡 Risiko Sedang</h3>
+          <p style="color: var(--amber-dark);">
+            Terdapat indikasi yang perlu diperhatikan. Ibu disarankan meningkatkan frekuensi pemeriksaan
+            dan berkonsultasi lebih lanjut dengan tenaga medis untuk tindakan pencegahan.
+          </p>
+        </div>
+        <div class="risk-card" style="background: var(--red-light);">
+          <h3 style="color: var(--red-dark);">🔴 Risiko Tinggi</h3>
+          <p style="color: var(--red-dark);">
+            Kondisi kehamilan memerlukan perhatian medis segera. Ibu sangat disarankan untuk segera
+            memeriksakan diri ke bidan atau rumah sakit terdekat untuk penanganan lebih lanjut.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Faktor risiko -->
+    <div class="about-section">
+      <h2>Faktor yang Mempengaruhi Risiko Kehamilan</h2>
+      <p>Beberapa faktor kesehatan yang digunakan sistem ini sebagai indikator penilaian risiko kehamilan:</p>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 20px;">
+
+        <div class="card" style="padding: 20px;">
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+            <div style="width: 36px; height: 36px; background: var(--green-light); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3B6D11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <strong style="font-size: 14px;">Tekanan Darah</strong>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted);">
+            Tekanan darah sistolik dan diastolik yang abnormal dapat mengindikasikan preeklampsia,
+            salah satu komplikasi serius pada kehamilan.
+          </p>
+        </div>
+
+        <div class="card" style="padding: 20px;">
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+            <div style="width: 36px; height: 36px; background: var(--green-light); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3B6D11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <strong style="font-size: 14px;">Kadar Gula Darah</strong>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted);">
+            Kadar gula darah yang tinggi berisiko menyebabkan diabetes gestasional yang berdampak
+            pada kesehatan ibu dan perkembangan janin.
+          </p>
+        </div>
+
+        <div class="card" style="padding: 20px;">
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+            <div style="width: 36px; height: 36px; background: var(--green-light); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3B6D11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>
+            </div>
+            <strong style="font-size: 14px;">Suhu Tubuh</strong>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted);">
+            Suhu tubuh yang tidak normal selama kehamilan dapat menjadi tanda adanya infeksi
+            atau kondisi medis lain yang perlu ditangani segera.
+          </p>
+        </div>
+
+        <div class="card" style="padding: 20px;">
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+            <div style="width: 36px; height: 36px; background: var(--green-light); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3B6D11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <strong style="font-size: 14px;">Detak Jantung & Usia</strong>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted);">
+            Detak jantung yang tidak normal dan usia ibu di luar rentang optimal turut berkontribusi
+            pada peningkatan risiko komplikasi kehamilan.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Cara kerja sistem -->
+    <div class="about-section">
+      <h2>Cara Kerja Sistem Klasifikasi Ini</h2>
+      <p>
+        Sistem ini menggunakan algoritma <strong>Random Forest</strong>, salah satu metode machine learning
+        yang andal dalam mengklasifikasikan data medis. Berikut alur kerja sistem secara sederhana:
+      </p>
+
+      <ul class="step-list">
+        <li>
+          <div>
+            <strong>Input data kesehatan</strong>
+            <p>Pengguna memasukkan data berupa usia, tekanan darah sistolik dan diastolik, kadar gula darah, suhu tubuh, dan detak jantung melalui formulir yang tersedia.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <strong>Pemrosesan oleh model Random Forest</strong>
+            <p>Data yang dimasukkan diproses oleh model machine learning yang telah dilatih menggunakan dataset UCI Maternal Health Risk yang dikumpulkan dari enam rumah sakit di Bangladesh.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <strong>Klasifikasi tingkat risiko</strong>
+            <p>Model menghasilkan prediksi tingkat risiko kehamilan beserta probabilitas untuk setiap kelas (rendah, sedang, tinggi) berdasarkan pola yang dipelajari dari data latih.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <strong>Tampilan hasil & rekomendasi</strong>
+            <p>Hasil klasifikasi ditampilkan secara visual beserta rekomendasi tindakan yang sebaiknya dilakukan berdasarkan tingkat risiko yang terdeteksi.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Tentang algoritma -->
+    <div class="about-section">
+      <h2>Tentang Algoritma Random Forest</h2>
+      <p>
+        Random Forest adalah algoritma ensemble learning yang membangun banyak pohon keputusan (decision tree)
+        secara bersamaan, kemudian menggabungkan hasilnya untuk menghasilkan prediksi yang lebih akurat dan stabil.
+      </p>
+      <p>
+        Algoritma ini dipilih karena kemampuannya dalam menangani data medis yang kompleks,
+        tidak sensitif terhadap outlier, serta terbukti menghasilkan performa tinggi pada dataset
+        klasifikasi risiko kehamilan dengan akurasi mencapai <strong>85%</strong> pada data uji.
+      </p>
+
+      <div style="background: var(--green-pale); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-top: 20px;">
+        <p style="font-size: 13px; color: var(--text-muted); margin: 0;">
+          <strong style="color: var(--green-mid);">Catatan penting:</strong>
+          Hasil klasifikasi dari sistem ini bersifat sebagai deteksi dini dan tidak menggantikan
+          diagnosis medis profesional. Selalu konsultasikan kondisi kehamilan Anda dengan bidan
+          atau dokter kandungan yang terpercaya.
+        </p>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 16px;">
+      <a href="/" class="btn btn-primary">Mulai pemeriksaan</a>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>© 2025 MaternalCare · Sistem Klasifikasi Risiko Kesehatan Ibu Hamil</p>
+  </footer>
+
+</body>
+</html>
